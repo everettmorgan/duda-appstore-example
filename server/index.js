@@ -1,7 +1,5 @@
 import express from 'express';
 import ngrok from 'ngrok';
-import markup from './helpers/markup.js';
-
 import * as db from './store.js';
 
 const app = express();
