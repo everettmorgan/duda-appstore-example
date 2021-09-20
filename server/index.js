@@ -7,12 +7,6 @@ import * as db from './store.js';
 const app = express();
 app.use(express.json());
 
-app.get('/', async function(req, res) {
-  const { site_name } = req.query;
-  const { auth, about } = await getInstall(site_name);
-  res.send(markup(about, auth));
-})
-
 app.post('/install', async function(req, res) {
   const { body } = req;
   await db.addInstall(body);
