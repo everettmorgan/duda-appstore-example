@@ -2,6 +2,10 @@
 
 This repo contains a simple frontend and backend to demonstrate the lifecycle and integration touchpoints of a Duda app.
 
+## Requirements
+
+- Node
+
 ## Usage
 
 1. Clone the repo
