@@ -1,0 +1,24 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "_server": "node server/index.js",
+    "_clientNgrok": "node ./client/start.js",
+    "_client": "cd ./client && node ../node_modules/@vue/cli-service/bin/vue-cli-service.js serve --silent > /dev/null",
+    "go": "npm install && node ./node_modules/concurrently/bin/concurrently.js \"npm run _clientNgrok\" \"npm run _server\" \"npm run _client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vue/cli": "^4.5.13",
+    "@vue/cli-service": "^4.5.13",
+    "concurrently": "^6.2.1",
+    "express": "^4.17.1",
+    "lowdb": "^3.0.0",
+    "ngrok": "^4.2.2",
+    "vue-template-compiler": "^2.6.14"
+  }
+}
